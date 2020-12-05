@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form</title>
+<style>
+body{background-color:6495ED}
+</style>
+</head>
+
+<body>
+    <!--HTML элемент <form> определяет форму, которая используется для сбора пользовательских данных.
+        HTML форма содержит элементы формы(типы элементов ввода, такие как текстовые поля, флажки, переключатели, кнопки отправки и т.д.).-->
+    <form action="">
+    <!--элементы формы-->
+    </form>
+
+    <form action="">
+        <label for="name">Номер вашей банковской карти:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="surname">Пин код вашей банковской каркти:</label><br>
+        <input type="text" id="surname" name="surname">
+    </form>
+    <!--Тег <label> определяет метку для многих элементов формы.
+        Атрибут for тега <label> должен быть равен атрибуту id элемента <input type="radio">, чтобы связать их вместе.-->
+
+    <!--<input type="radio"> определяет радиокнопки.
+        Переключатели позволяют пользователю выбрать один из ограниченного числа вариантов.-->
+    <form action="">
+        <input type="radio" id="first" name="group" value="first">
+        <label for="first">Росийская карта </label><br>
+     
+        <input type="radio" id="other" name="group" value="other">
+        <label for="other">Другое</label>
+    </form>
+
+    <!--<input type="submit"> определяет кнопку для представления в виде данных для обработчика форм.
+        Обработчик форм обычно представляет собой страницу на сервере со скриптом для обработки входных данных.
+        Обработчик форм задается в окне формы атрибутом action.    -->
+                <!--placeholder-->
+    <form action="/action_page.php">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" value="user name"><br>
+        <label for="surname">Фамилия:</label><br>
+        <input type="text" id="surname" name="surname" value="user surname">
+        <input type="submit" value="Отчество">
+        <input type="reset" name="" id="">
+    </form>
+
+    <!--Атрибут action определяет действие, которое должно быть выполнено при отправке формы.
+        Если атрибут action опущен, действие устанавливается на текущую страницу.-->
+
+        <form action="/action_page.php.php" target="_blank">
+
+    <!--Атрибут method атрибут определяет метод HTTP(GET или POST) для использования при отправке данных формы.-->
+    <form action="/action_page.php" method="get"></form>
+    <form action="/action_page.php" method="post"></form>
+
+    <!--Каждое поле ввода должно иметь атрибут name для отправки.
+    Если атрибут name опущен, данные этого поля ввода вообще не будут отправлены.-->
+
+    <!--checkbox-->
+    <form action="">
+        <label for="#">Выберите ваш банк </label> <br>
+        
+        <input type="checkbox" name="program" id="atom">
+        <label for="atom">Monobank</label>
+        
+        <input type="checkbox" name="program" id="vc">
+        <label for="vc">Пиват Банк</label>
+
+        <input type="checkbox" name="program" id="sublime">
+        <label for="sublime">Другое</label>
+    </form>
+
+    <!-- date -->
+    <label for="birthday">Дата рождения:</label>
+    <input type="date" name="birthday" id="birthday">
